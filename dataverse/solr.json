@@ -1,0 +1,28 @@
+{
+    "key": "solr",
+    "description": "Solr 4.6 intended for use with Dataverse",
+    "access": "internal",
+    "info": "https://nationaldataservice.atlassian.net/wiki/display/NDSC/Dataverse",
+    "label": "Solr",
+    "image": {
+		"name": "ndslabs/dataverse-solr",
+		"tags": ["4.2.3", "latest"]
+	},
+    "ports": [
+        { "port": 8983, "protocol": "tcp" }
+    ],
+    "readinessProbe" : {
+        "type" : "http",
+        "path" : "/solr",
+        "port" : 8983,
+        "initialDelay": 30,
+        "timeout" : 360
+    },
+    "resourceLimits": {
+        "cpuMax": 200,
+        "cpuDefault": 100,
+        "memMax": 500,
+        "memDefault": 200
+    },
+	"tags" : ["23"]
+}
