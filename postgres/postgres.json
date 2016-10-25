@@ -57,11 +57,6 @@
         "initialDelay": 30,
         "timeout": 500
     },
-    "volumeMounts": [ 
-		{
-			"mountPath": "/var/lib/postgresql/data"
-		}
-	],
     "resourceLimits": {
         "cpuMax": 200,
         "cpuDefault": 100,
